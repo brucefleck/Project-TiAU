@@ -43,7 +43,7 @@
 
         echo '<div class="acc-created-container">
         <div class="acc-created-msg">
-            <h2>Bienvenido, $name!!!</h2>
+            <h2>Bienvenido, '.$name.'!!!</h2>
             <p>Ya esta registrada tu cuenta :D</p>
         </div>
         <div class="goto-login-button">
