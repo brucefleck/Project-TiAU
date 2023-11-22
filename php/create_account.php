@@ -10,7 +10,7 @@
     $username = "u252844311_brucefleck";
     $password = "Moocat12#";
     $dbname = "u252844311_TIAU";
-
+    echo "<h2>KYS</h2>";
     // Attempt to create a connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     echo "<h2>OMFG</h2>";
