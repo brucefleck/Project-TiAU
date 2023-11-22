@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title id="title-id">Homepage - </title>
+    <script>
+        const urlData = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('name');
+        const nombreElemeno = document.getElementById('name-go-here');
+        nameElement.textContent += name;
+    </script>
     <link rel="stylesheet" href="..\css\homepage-stylesheet.css">
     <link rel="stylesheet" href="../static/css/universal-stylesheet.css">
     <link rel="icon" href="..\assets\images\upc-logo-red.webp" type="image\webp">
@@ -39,7 +45,11 @@
         </div>
         <div class="feed">
             <div class="post-container" id="post">
-                <h1>Bienvenido</h1>
+                <h1 id="Bem">Bienvenido, </h1>
+                <script>
+                    const nom_bem = document.getElementById('Bem');
+                    nom_bem.textContent += name;
+                </script>
                 <section id="make_post">
                     <h2>Escribe tu post</h2>
                     <form action="/crear_post" method="post" enctype="multipart/form-data">
@@ -53,14 +63,14 @@
                         <label for="image">Selecciona una imagen:</label>
                         <input type="file" id="image" name="image" accept="image/*">
                         <br>
-                        <input type="submit" value="Postear">
+                        <input id="submit-button" type="submit" value="Postear">
                     </form>
                 </section>
                 
             </div>
             <div>
                 <form action="mostrar_posts">
-                    <input type="submit" value = "Ver publicaciones">
+                    <input id="ver-posts-button" type="submit" value = "Ver publicaciones">
                 </form>
             </div>
         </div>

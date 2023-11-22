@@ -2,7 +2,7 @@
 
 body {
     margin: 0px;
-    background-color: #1d1d76 !important;
+    background-color: whitesmoke !important;
     color: black  !important;
     font-family: 'Roboto', sans-serif;
 }
@@ -15,6 +15,11 @@ header {
 
 .logo {
     margin-left: 1rem;
+    background-color: #252598;
+    width: 6.25rem;
+    padding: 0.5rem;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
 }
 .logo img {
     height: 3rem;
@@ -115,6 +120,16 @@ header {
 
 .feed {
     margin-top: 20px;
+    width: 40rem;
+}
+
+#titulo {
+    width: 95%;
+}
+
+#contenido {
+    height: 6rem;
+    width: 95%;
 }
 
 .post-container {
@@ -162,4 +177,12 @@ input[type="submit"]:hover {
 
 #comentario {
     margin-top: 20px;
+}
+
+#submit-button {
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+#ver-posts-button {
+    border-radius: 8px;
 }
