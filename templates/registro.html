@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="..\css\registro-stylesheet.css">
     <link rel="stylesheet" href="..\css\universal-stylesheet.css">
     <title>TiAU Registro</title>
+    <script>
+        function validatePassword() {
+            var password1 = document.getElementById("pass1").value;
+            var password2 = document.getElementById("pass2").value;
+
+            if(password1 != password2) {
+                alert("Las contrasenias no coinciden! Por favor reingrese su contrasenia :3");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <div class="filler">
@@ -33,22 +45,22 @@
                     <div class="input-name INF">
                         <label for="input-nombre">Nombre</label>
                         <br>
-                        <input class="input-primary" type="text" name="input-nombre" id="primer_nombre" placeholder="Tu primer nombre">
+                        <input class="input-primary" type="text" name="first_name" placeholder="Tu primer nombre" required>
                     </div>
                     <div class="input-email INF">
                         <label for="input-correo">Correo electronico</label>
                         <br>
-                        <input class="input-primary" type="email" name="input-correo" id="correo" placeholder="ejemplo@email.com">
+                        <input class="input-primary" type="email" name="email" placeholder="ejemplo@email.com" required>
                     </div>
                     <div class="input-password INF">
                         <label for="input-contrasenia">Contrasenia</label>
                         <br>
-                        <input class="input-primary" type="password" name="input-contrasenia" id="contrasenia" placeholder="Contrasenia">
+                        <input class="input-primary" type="password" name="password1" id="pass1" placeholder="Contrasenia" required>
                     </div>
                     <div class="input-confirm-password INF">
                         <label for="input-confirm-contrasenia">Confirme contrasenia</label>
                         <br>
-                        <input class="input-primary" type="password" name="input-confirm-contrasenia" id="confirme-contrasenia" placeholder="Escriba su contrasenia de nuevo">
+                        <input class="input-primary" type="password" name="password2" id="pass2" placeholder="Escriba su contrasenia de nuevo" required>
                     </div>
                     <input class="button-primary login-button" type="submit" value="Registrarse!">
                 </form>
