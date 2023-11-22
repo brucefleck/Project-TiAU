@@ -1,6 +1,3 @@
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,12 +13,12 @@ ini_set('display_errors', 1);
 
     // Attempt to create a connection
     $conn = new mysqli($servername, $username, $password, $dbname);
-
+    echo "<h2>OMFG</h2>";
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
+    echo "<h2>ARE YOU KIDDING ME</h2>";
     // Process form data
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST['first_name'];
@@ -41,7 +38,7 @@ ini_set('display_errors', 1);
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
-
+    echo "<h2>I HATE YOU</h2>";
     // Close the connection
     $conn->close();
     ?>
