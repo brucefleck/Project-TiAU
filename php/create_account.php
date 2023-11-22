@@ -4,10 +4,11 @@ ini_set('display_errors', 1);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Database Connection Check</title>
+    <title>HELLOOO</title>
 </head>
 <body>
     <?php
+    echo "<h2>GUH</h2>";
     $servername = "https://tiau.in/";
     $username = "u252844311_brucefleck";
     $password = "Moocat12#";
