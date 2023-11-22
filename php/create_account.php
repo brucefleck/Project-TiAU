@@ -49,7 +49,7 @@
                 <p>Ya esta registrada tu cuenta :D</p>
             </div>
             <div style="width: 7rem; margin-left: auto; margin-right: auto;">
-                <a href="index.html">
+                <a href="..\index.html">
                     <button style="background-color: #2A29B3;
                     color: whitesmoke;
                     padding: 1rem 1.5rem;
