@@ -18,7 +18,8 @@
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get('name');
         if (name) {
-            document.write("<p>Hello, " + username + "</p>");
+            const nameElement = document.getElementById('name-go-here');
+            nameElement.textContent += name;
         } else {
             document.write("<p>User not found</p>");
         }
@@ -37,7 +38,7 @@
                 <img src="..\static\images\bruce.png" alt="profile picture">
             </div>
             <div class="name">
-                <p>Bruce Fleck</p>
+                <p id="name-go-here"> </p>
             </div>
         </div>
         <div class="feed">
