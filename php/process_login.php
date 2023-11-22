@@ -27,7 +27,7 @@
     $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    header("Location: ..\templates\homepage.html?name=" . urlencode($row["name"]));
+    header("Location: ..\\templates\homepage.html?name=" . urlencode($row["name"]));
     
     $conn->close();
 ?>
