@@ -18,6 +18,7 @@
     
     //CHECK IF EMAIL IS ALREADY REGISTERED
     $email = $_POST['email'];
+    echo "<h3>email: $email</h3>";
 
     $check_query = "SELECT * FROM users WHERE email = $email";
     $result = $connection->query($check_query);
