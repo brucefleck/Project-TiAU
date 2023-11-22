@@ -20,7 +20,7 @@
     $email = $_POST['email'];
     echo "<h3>email: $email</h3>";
 
-    $check_query = "SELECT * FROM 'users' WHERE 'email' = $email";
+    $check_query = "SELECT * FROM users WHERE email = '$email'";
     $result = $connection->query($check_query);
 
     if ($result->num_rows > 0) {
@@ -35,7 +35,6 @@
             echo "<p>Email: $email</p>";
             echo "<p>Password: $password</p>";
     
-            // SQL query to insert data into the database
             $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
     
             if ($conn->query($sql) === TRUE) {
