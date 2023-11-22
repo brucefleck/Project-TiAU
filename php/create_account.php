@@ -19,10 +19,23 @@ ini_set('display_errors', 1);
 
     // Check connection
     if ($conn->connect_error) {
-        echo "<h2>Connection Failed</h2>";
-        echo "Error: " . $conn->connect_error;
-    } else {
-        echo "<h2>Connection Successful</h2>";
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Process form data
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = $_POST['first_name'];
+        $email = $_POST['email'];
+        $password = $_POST['password1'];
+
+        // SQL query to insert data into the database
+        $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
 
     // Close the connection
