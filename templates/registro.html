@@ -41,7 +41,7 @@
             </div>
             <div class="input-field">
                 <b>Crear una cuenta nueva</b>
-                <form action="/procesar_registro">
+                <form action="/procesar_registro" method="post" onsubmit="return validatePassword();">
                     <div class="input-name INF">
                         <label for="input-nombre">Nombre</label>
                         <br>
