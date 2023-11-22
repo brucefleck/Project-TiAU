@@ -9,9 +9,9 @@
     <h2>Cuanta creada exitosamente!</h2>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nombre = $_POST['nombre'];
+        $name = $_POST['first_name'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = $_POST['password1'];
 
         echo "<p>Nombre: $nombre</p>";
         echo "<p>Email: $email</p>";
