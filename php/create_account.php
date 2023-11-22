@@ -1,10 +1,7 @@
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HELLOOO</title>
+    <title>Cuenta Creada</title>
 </head>
 <body>
     <?php
@@ -14,35 +11,42 @@ error_reporting(E_ALL);
     $password = "Moocat12#";
     $dbname = "u252844311_TIAU";
     echo "<h2>KYS</h2>";
-    // Attempt to create a connection
+    
     $conn = new mysqli($servername, $username, $password, $dbname);
-    echo "<h2>OMFG</h2>";
-    // Check connection
+    
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    echo "<h2>ARE YOU KIDDING ME</h2>";
-    // Process form data
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = $_POST['first_name'];
-        $email = $_POST['email'];
-        $password = $_POST['password1'];
+    
+    //CHECK IF EMAIL IS ALREADY REGISTERED
+    $email = $_POST['email'];
 
-        echo "<p>Nombre: $name</p>";
-        echo "<p>Email: $email</p>";
-        echo "<p>Password: $password</p>";
+    $check_query = "SELECT * FROM users WHERE email = '\$email'";
+    $result = $connection->query($check_query);
 
-        // SQL query to insert data into the database
-        $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
-
-        if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+    if ($result->num_rows > 0) {
+        echo "<script>alert('Email already exists. Please use a different email.');</script>";
+    } else {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = $_POST['first_name'];
+            $email = $_POST['email'];
+            $password = $_POST['password1'];
+    
+            echo "<p>Nombre: $name</p>";
+            echo "<p>Email: $email</p>";
+            echo "<p>Password: $password</p>";
+    
+            // SQL query to insert data into the database
+            $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+    
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
         }
     }
-    echo "<h2>I HATE YOU</h2>";
-    // Close the connection
+
     $conn->close();
     ?>
 </body>
