@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cuenta Creada</title>
+    <title>Cuenta Creada - TiAU</title>
+    <link rel="stylesheet" href="..\css\acc-created-stylesheet.css">
+    <link rel="stylesheet" href="..\css\universal-stylesheet.css">
+    <link rel="icon" href="..\assets\images\upc-logo-red.webp" type="image/webp">
 </head>
 <body>
     <?php
@@ -34,9 +37,31 @@
         $email = $_POST['email'];
         $password = $_POST['password1'];
 
-        echo "<p>Nombre: $name</p>";
-        echo "<p>Email: $email</p>";
-        echo "<p>Password: $password</p>";
+        //echo "<p>Nombre: $name</p>";
+        //echo "<p>Email: $email</p>";
+        //echo "<p>Password: $password</p>";
+
+        echo '<div class="acc-created-container">
+        <div class="acc-created-msg">
+            <h2>Bienvenido, $name!!!</h2>
+            <p>Ya esta registrada tu cuenta :D</p>
+        </div>
+        <div class="goto-login-button">
+            <a href="index.html">
+                <button class="primary-button goto-login">Ir a login!</button>
+            </a>
+        </div>
+        <div class="decoration">
+                <div class="img-container">
+                    <img src="..\assets\images\tiau-logo_svg.svg" alt="tiau-logo">
+                </div>
+                <div class="colors-container">
+                    <div class="yellow"></div>
+                    <div class="orange"></div>
+                    <div class="pink"></div>
+                </div>
+            </div>
+        </div>';
 
         $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
 
