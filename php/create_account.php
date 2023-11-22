@@ -8,7 +8,7 @@
     // Database connection details
     $servername = "tiau.in"; // Replace with your server name
     $username = "u252844311_brucefleck"; // Replace with your database username
-    $password = "1JVp3K$N78DEPq4Z$wnn"; // Replace with your database password
+    $password = '1JVp3K$N78DEPq4Z$wnn'; // Replace with your database password
     $dbname = "u252844311_TIAU_DB"; // Replace with your database name
 
     // Attempt to create a connection
