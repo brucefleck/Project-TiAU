@@ -13,7 +13,7 @@
         $email = $_POST['email'];
         $password = $_POST['password1'];
 
-        echo "<p>Nombre: $nombre</p>";
+        echo "<p>Nombre: $name</p>";
         echo "<p>Email: $email</p>";
         echo "<p>Password: $password</p>";
     }
