@@ -26,7 +26,7 @@
 
     echo "<p>Email: $email</p>";
 
-    $query = "SELECT * FROM users WHERE email = ?";
+    $query = "SELECT * FROM users WHERE email = $email";
     echo "<p>1</p>";
     if ($conn->query($query) === TRUE) { 
         echo "SUCCESS"; 
