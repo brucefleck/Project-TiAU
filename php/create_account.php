@@ -1,3 +1,6 @@
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +9,7 @@
 <body>
     <?php
     echo "<h2>GUH</h2>";
-    $servername = "154.56.48.62";
+    $servername = "localhost";
     $username = "u252844311_brucefleck";
     $password = "Moocat12#";
     $dbname = "u252844311_TIAU";
