@@ -26,14 +26,11 @@
 
     echo "<p>Email: $email</p>";
 
-    $query = "SELECT * FROM users WHERE email = '$email'";
-    echo "<p>1</p>";
-    if ($conn->query($query) === TRUE) { 
-        echo "SUCCESS"; 
-  } else { 
-        echo "NOOO RAAHHHHH: " . $conn->error; 
-  } 
-  echo "<p>1.1</p>";
+    $sql = "SELECT * FROM users WHERE email = '$email'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    echo "<p>Name: ". $row["name"] . "</p>";
+    echo "<p>1.1</p>";
     $stmt = $conn->prepare($query);
     echo "<p>2</p>";
     $stmt->bind_param("s", $email);
