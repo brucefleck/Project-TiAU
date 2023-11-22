@@ -5,12 +5,10 @@
 </head>
 <body>
     <?php
-    echo "<h2>GUH</h2>";
     $servername = "localhost";
     $username = "u252844311_brucefleck";
     $password = "Moocat12#";
     $dbname = "u252844311_TIAU";
-    echo "<h2>KYS</h2>";
     
     $conn = new mysqli($servername, $username, $password, $dbname);
     
@@ -21,7 +19,7 @@
     //CHECK IF EMAIL IS ALREADY REGISTERED
     $email = $_POST['email'];
 
-    $check_query = "SELECT * FROM users WHERE email = '\$email'";
+    $check_query = "SELECT * FROM users WHERE email = $email";
     $result = $connection->query($check_query);
 
     if ($result->num_rows > 0) {
