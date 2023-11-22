@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Database Connection Test</title>
+    <title>Database Connection Check</title>
 </head>
 <body>
     <?php
-    // Database connection details
-    $servername = "tiau.in"; // Replace with your server name
-    $username = "u252844311_brucefleck"; // Replace with your database username
-    $password = '1JVp3K$N78DEPq4Z$wnn'; // Replace with your database password
-    $dbname = "u252844311_TIAU_DB"; // Replace with your database name
+    $servername = "tiau.in";
+    $username = "u252844311_brucefleck";
+    $password = "1JVp3K\$N78DEPq4Z\$wnn"; // Escaping special characters
+    $dbname = "u252844311_TIAU_DB";
 
     // Attempt to create a connection
     $conn = new mysqli($servername, $username, $password, $dbname);
