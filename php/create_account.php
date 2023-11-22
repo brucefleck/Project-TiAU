@@ -48,7 +48,14 @@
         </div>
         <div class="goto-login-button">
             <a href="index.html">
-                <button class="primary-button goto-login">Ir a login!</button>
+                <button style="background-color: #2A29B3;
+                color: whitesmoke;
+                padding: 1rem 1.5rem;
+                border: none;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 4px;" class="primary-button goto-login">Ir a login!</button>
             </a>
         </div>
         <div class="decoration">
