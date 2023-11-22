@@ -9,7 +9,7 @@ ini_set('display_errors', 1);
 </head>
 <body>
     <?php
-    $servername = "tiau.in";
+    $servername = "https://tiau.in/";
     $username = "u252844311_brucefleck";
     $password = "1JVp3K\$N78DEPq4Z\$wnn"; // Escaping special characters
     $dbname = "u252844311_TIAU_DB";
