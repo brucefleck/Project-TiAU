@@ -6,7 +6,7 @@
 <body>
     <?php
     // Database connection details
-    $servername = "https://auth-db1074.hstgr.io/index.php?route=/"; // Replace with your server name
+    $servername = "tiau.in"; // Replace with your server name
     $username = "u252844311_brucefleck"; // Replace with your database username
     $password = "1JVp3K$N78DEPq4Z$wnn"; // Replace with your database password
     $dbname = "u252844311_TIAU_DB"; // Replace with your database name
