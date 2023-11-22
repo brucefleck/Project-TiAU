@@ -27,10 +27,15 @@
     echo "<p>Email: $email</p>";
 
     $query = "SELECT * FROM users WHERE email = ?";
+    echo "<p>1</p>";
     $stmt = $connection->prepare($query);
+    echo "<p>2</p>";
     $stmt->bind_param("s", $email);
+    echo "<p>3</p>";
     $stmt->execute();
+    echo "<p>4</p>";
     $result = $stmt->get_result();
+    echo "<p>5</p>";
 
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
