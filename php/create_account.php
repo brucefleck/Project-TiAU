@@ -6,7 +6,7 @@
 <body>
     <?php
     echo "<h2>GUH</h2>";
-    $servername = "https://tiau.in/";
+    $servername = "tiau.in";
     $username = "u252844311_brucefleck";
     $password = "Moocat12#";
     $dbname = "u252844311_TIAU";
