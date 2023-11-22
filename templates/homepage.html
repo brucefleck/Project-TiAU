@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TiAU</title>
-    <link rel="stylesheet" href="../static/css/homepage-stylesheet.css"> 
+    <title>Homepage</title>
+    <link rel="stylesheet" href="..\css\homepage-stylesheet.css">
     <link rel="stylesheet" href="../static/css/universal-stylesheet.css">
-    <link rel="icon" href="../static/images/upc-logo-red.webp" type="image\webp">
+    <link rel="icon" href="..\assets\images\upc-logo-red.webp" type="image\webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        if (name) {
+            document.write("<p>Hello, " + username + "</p>");
+        } else {
+            document.write("<p>User not found</p>");
+        }
+    </script>
     <header>
         <div class="logo">
-            <img src="..\static\images\tiau-logo_svg.svg" alt="tiau-logo">
+            <img src="..\assets\images\tiau-logo_svg.svg" alt="tiau-logo">
         </div>
     </header>
     <div class="content-container">
         <div class="banner">
-            <img src="..\static\images\Screenshot 2023-11-10 235429.png" alt="banner-img">
+            <img src="..\static\images\fondo.png" alt="banner-img">
         </div>
         <div class="pfp-name">
             <div class="pfp">
-                <img src="..\static\images\Screenshot 2023-10-18 004247.png" alt="profile picture">
+                <img src="..\static\images\bruce.png" alt="profile picture">
             </div>
             <div class="name">
                 <p>Bruce Fleck</p>
@@ -36,10 +47,11 @@
                     <h2>Escribe tu post</h2>
                     <form action="/crear_post" method="post" enctype="multipart/form-data">
                         <label for="titulo">Titulo</label>
-                        <input type="text" name="titulo" id="titulo" required>
+                        <input type="text" name="titulo" id="titulo" required placeholder="Titulo">
                         <br>
                         <label for="contenido">Contenido</label>
-                        <textarea name="contenido" id="contenido" cols="30" rows="10" required></textarea>
+                        <textarea name="contenido" id="contenido" cols="30" rows="10"
+                            placeholder="Contenido"></textarea>
                         <br>
                         <label for="image">Selecciona una imagen:</label>
                         <input type="file" id="image" name="image" accept="image/*">
@@ -47,48 +59,18 @@
                         <input type="submit" value="Postear">
                     </form>
                 </section>
-                <div id = "comentario">
-                    <form action="/crear_comentario" method="post">
-                        <label for="comentario">Comentario</label>
-                        <input type="text" name="comentario" id="comentario" required>
-                        <input type="submit" value="Comentar">
-                    </form>
-                </div>
-            </div>
-            <div class="post">
-                <h2>Cierre de agua</h2>
-                <div class="post-contents">
-                    Estimada comunidad,
-                    <br>
-                    Nos dirigimos a ustedes con un anuncio importante sobre el suministro de agua en nuestra área. Con el objetivo de llevar a cabo mejoras esenciales y garantizar la seguridad y eficiencia de nuestras operaciones mineras, nos vemos en la necesidad de realizar un cierre temporal del suministro de agua en las próximas fechas. Este cierre programado permitirá llevar a cabo las tareas necesarias para mantener y mejorar la infraestructura que abastece de agua a nuestras instalaciones mineras. Entendemos que la interrupción del suministro puede generar inconvenientes, y por ello, hemos planificado cuidadosamente este proceso para minimizar cualquier impacto en la comunidad. - Obelisk
-                </div>
+                
             </div>
-            <div class="post COMMENT">
-                <div class="post-contents">
-                    No me parece justo que nos dejen sin agua!!
-                </div>
-            </div>
-            <div class="post COMMENT">
-                <div class="post-contents">
-                    Por cuanto tiempo?
-                </div>
-            </div>
-            <div class="post COMMENT">
-                <div class="post-contents">
-                    Me parece correcto
-                </div>
-            </div>
-            <div class="post COMMENT">
-                <div class="post-contents">
-                    Muchas gracias por la informacion!
-                </div>
-            </div>
-            <div class="post COMMENT">
-                <div class="post-contents">
-                    Datos importantes!!1
-                </div>
+            <div>
+                <form action="mostrar_posts">
+                    <input type="submit" value = "Ver publicaciones">
+                </form>
             </div>
         </div>
+        
     </div>
+    
+
 </body>
+
 </html>

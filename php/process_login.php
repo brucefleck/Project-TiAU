@@ -24,13 +24,10 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    echo "<p>Email: $email</p>";
-
     $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    echo "<p>Name: ". $row["name"] . "</p>";
-    
+    header("Location: ..\templates\homepage.html?name=" . urlencode($row["name"]));
     
     $conn->close();
 ?>

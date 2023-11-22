@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
     margin: 0px;
     background-color: #1d1d76 !important;
-    color: whitesmoke !important;
+    color: black  !important;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -50,17 +53,11 @@ header {
 
 .feed {
     justify-content: center;
+    background-color: #252598;
     margin-right: 25%;
     margin-left: 25%;
     padding: 1rem;
     border-radius: 5px;
-    
-}
-
-.post-container {
-    background-color: #252598;
-    padding: 1rem;
-    border-radius: 6px;
 }
 
 .textfield-container {
@@ -93,29 +90,76 @@ header {
     margin-left: 85%;
 }
 
-.post {
-    margin-top: 1rem;
-    background-color: #252598;
-    padding: 1rem;
-    border-radius: 6px;
+/* Homepage Styles */
+
+.logo img {
+    width: 100px;
+    height: 100px;
 }
-.post h3 {
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.pfp img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.name p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.feed {
+    margin-top: 20px;
+}
+
+.post-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2 {
     font-size: 20px;
-}
-.post-pfp {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 100%;
+    margin-bottom: 10px;
 }
 
-.post-contents {
-    display: flex;
-    align-items: center;
-}
-.post-contents img {
-    margin-left: 0.5rem;
+form {
+    margin-bottom: 10px;
 }
 
-.COMMENT {
-    margin-left: 10%;
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#comentario {
+    margin-top: 20px;
 }
