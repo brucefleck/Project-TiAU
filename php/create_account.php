@@ -1,7 +1,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +10,8 @@ ini_set('display_errors', 1);
     <?php
     $servername = "https://tiau.in/";
     $username = "u252844311_brucefleck";
-    $password = "1JVp3K\$N78DEPq4Z\$wnn"; // Escaping special characters
-    $dbname = "u252844311_TIAU_DB";
+    $password = "Moocat12#";
+    $dbname = "u252844311_TIAU";
 
     // Attempt to create a connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -27,6 +26,10 @@ ini_set('display_errors', 1);
         $name = $_POST['first_name'];
         $email = $_POST['email'];
         $password = $_POST['password1'];
+
+        echo "<p>Nombre: $name</p>";
+        echo "<p>Email: $email</p>";
+        echo "<p>Password: $password</p>";
 
         // SQL query to insert data into the database
         $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
