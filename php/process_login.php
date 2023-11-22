@@ -24,6 +24,8 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    echo "<p>Email: $email</p>";
+
     $query = "SELECT * FROM users WHERE email = ?";
     $stmt = $connection->prepare($query);
     $stmt->bind_param("s", $email);
