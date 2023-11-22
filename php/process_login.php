@@ -28,7 +28,13 @@
 
     $query = "SELECT * FROM users WHERE email = ?";
     echo "<p>1</p>";
-    $stmt = $connection->prepare($query);
+    if ($conn->query($query) === TRUE) { 
+        echo "SUCCESS"; 
+  } else { 
+        echo "NOOO RAAHHHHH: " . $conn->error; 
+  } 
+  echo "<p>1.1</p>";
+    $stmt = $conn->prepare($query);
     echo "<p>2</p>";
     $stmt->bind_param("s", $email);
     echo "<p>3</p>";
@@ -52,7 +58,7 @@
     }
 
     $stmt->close();
-    $connection->close();
+    $conn->close();
 ?>
 </body>
 </html>
